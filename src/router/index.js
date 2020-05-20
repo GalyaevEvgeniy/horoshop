@@ -6,12 +6,12 @@ Vue.use(VueRouter);
 
 const routes = [
 	{
-		path: "/",
+		path: "https://galyaevevgeniy.github.io/horoshop/dist/",
 		name: "Home",
 		component: Home
 	},
 	{
-		path: "/add-or-edit-layout/:id?",
+		path: "https://galyaevevgeniy.github.io/horoshop/dist/add-or-edit-layout/:id?",
 		name: "addOrEditLayout",
 		component: () => import("../views/pages/AddOrEditLayout.vue")
 	}
