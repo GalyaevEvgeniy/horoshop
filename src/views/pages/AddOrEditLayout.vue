@@ -52,7 +52,7 @@
 					this.url = this.$store.state.layouts[this.$route.params.id].url;
 					this.img_list = this.$store.state.layouts[this.$route.params.id].img_list;
 				} else{
-					this.$router.push("https://galyaevevgeniy.github.io/horoshop/dist/");
+					this.$router.push("/");
 				}
 			}
 		},
@@ -63,7 +63,7 @@
 		},
 		methods: {
 			goBack(){
-				window.history.length > 1 ? this.$router.go(-1) : this.$router.push("https://galyaevevgeniy.github.io/horoshop/dist/");
+				window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
 			},
 			onSaveLayout(){
 				if (Number.isInteger(+this.id) && +this.id <= 0){
@@ -93,12 +93,12 @@
 					img_list: this.img_list,
 				});
 
-				this.$router.push("https://galyaevevgeniy.github.io/horoshop/dist/");
+				this.$router.push("/");
 			},
 			onRemoveLayout(){
 				if (this.is_edit){
 					this.$store.commit("deleteLayout", +this.$route.params.id);
-					this.$router.push("https://galyaevevgeniy.github.io/horoshop/dist/");
+					this.$router.push("/");
 				}
 			},
 			onUploadFile(event){

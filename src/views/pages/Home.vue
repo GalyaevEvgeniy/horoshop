@@ -1,8 +1,7 @@
 <template>
 	<div class = "home">
 		<h1>Все дизайны</h1>
-		<router-link to = "https://galyaevevgeniy.github.io/horoshop/dist/add-or-edit-layout" class = "btn btn--submit add-layout">Добавить дизайн</router-link>
-		<!--<router-link to = "/add-or-edit-layout" class = "btn btn&#45;&#45;submit add-layout">Добавить дизайн</router-link>-->
+		<router-link to = "/add-or-edit-layout" class = "btn btn--submit add-layout">Добавить дизайн</router-link>
 		<div class = "layouts" v-if = "JSON.stringify($store.state.layouts)[2]">
 			<div class = "layouts__item" v-for = "item in $store.state.layouts">
 				<swiper ref = "mySwiper">
@@ -35,7 +34,7 @@
 		},
 		methods: {
 			goToEditLayout(id){
-				this.$router.push("https://galyaevevgeniy.github.io/horoshop/dist/add-or-edit-layout/" + id + "/");
+				this.$router.push("/add-or-edit-layout/" + id + "/");
 			}
 		}
 	}
