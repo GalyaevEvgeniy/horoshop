@@ -11,7 +11,7 @@ const routes = [
 		component: Home
 	},
 	{
-		path: "add-or-edit-layout/:id?",
+		path: "/add-or-edit-layout/:id?",
 		name: "addOrEditLayout",
 		component: () => import("../views/pages/AddOrEditLayout.vue")
 	}
